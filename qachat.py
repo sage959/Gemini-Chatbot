@@ -6,7 +6,7 @@ import streamlit as st
 import google.generativeai as genai
 
 # Configure API
-genai.configure(api_key="AIzaSyAZkl5WmOOF0_u-NU76Z4DT5CfG8VeUM2Q")
+genai.configure(api_key="key")
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
 # Create model object
@@ -51,3 +51,4 @@ for chat in st.session_state.chat_history:
         st.markdown(f"**User:** {chat['content']}")
     else:
         st.markdown(f"**Gemini:** {chat['content']}")
+
